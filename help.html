@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="index.html" class="active">JCHS Beak Squad</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="index.html">Home</a>
+    <a href="help.html">Help Form</a>
+    <a href="about.html">About</a>
+    <a href="bstt.html">Beak Squad Tec Tips</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  
+</div>
+
+<h2 style="text-align: center;font-size: xx-large ;"> Need Help</h2>
+<div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">Full Name</label>
+    <input type="text" id="fname" name="FullName" placeholder="Your name..">
+
+    <label for="ATag">Asset Tag</label>
+    <input type="text" id="lname" name="lastname" placeholder="Asset Tag..">
+
+    <label for="Problem">Problem</label>
+    <input type="text" id="Problem" name="Problem" placeholder="Problem..">
+  
+
+    <label for="Describe">Describe Your Problem</label>
+    <textarea id="Describe" name="Describe" placeholder="Describe Your Problem.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+</body>
+<script>
+  /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+var x = document.getElementById("myLinks");
+if (x.style.display === "block") {
+  x.style.display = "none";
+} else {
+  x.style.display = "block";
+}
+}
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}
+slides[slideIndex-1].style.display = "block";
+setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+</html>

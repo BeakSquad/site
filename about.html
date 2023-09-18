@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+   <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- Top Navigation Menu -->
+   <div class="topnav">
+     <a href="index.html" class="active">JCHS Beak Squad</a>
+     <!-- Navigation links (hidden by default) -->
+     <div id="myLinks">
+       <a href="index.html">Home</a>
+       <a href="help.html">Help Form</a>
+       <a href="about.html">About</a>
+       <a href="bstt.html">Beak Squad Tec Tips</a>
+     </div>
+     <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+       <i class="fa fa-bars"></i>
+     </a>
+     
+   </div>
+
+<H2 class="center-t"> About Us</H2>
+<table class="center">
+  <tr>
+    <!-- FRANSAS -->
+    <td>
+      <div class="card">
+      <img src="img_avatar.png" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>mrs. Fransas</b></h4>
+        <p>Techer</p>
+      </div>
+    </div>
+  </td>
+  <!--DAVID-->
+    <td><div class="card">
+      <img src="img_avatar.png" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>David Thompson</b></h4>
+        <p>Student</p>
+      </div>
+    </div>
+  </td>
+<!-- LILY-->
+    <td>
+      <div class="card">
+        <img src="img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Lily ST. JACQUES</b></h4>
+          <p>Student</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+  </table>
+</body>
+<script>
+  /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+var x = document.getElementById("myLinks");
+if (x.style.display === "block") {
+  x.style.display = "none";
+} else {
+  x.style.display = "block";
+}
+}
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}
+slides[slideIndex-1].style.display = "block";
+setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+</html>
